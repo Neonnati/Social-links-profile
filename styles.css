@@ -1,0 +1,126 @@
+:root {
+/* Primary */
+
+  --Green: hsl(75, 94%, 57%);
+
+/* Neutral */
+
+  --White: hsl(0, 0%, 100%);
+  --Button-Grey: hsl(0, 0%, 20%);
+  --Card-background: hsl(0, 0%, 12%);
+  --Background: hsl(0, 0%, 8%);
+
+/* fonts */
+
+  --fs: 14px;
+  --ff: "Inter", sans-serif;
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-700: 700;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff);
+  font-size: var(--fs);
+  color: var(--White);
+  background-color: var(--Background);
+  height: 100vh;
+}
+
+article {
+  width: 27.5em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--Card-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.95em;
+  padding: 3em 2.9em;
+  border-radius: 1em;
+}
+
+img {
+  width: 6.3em;
+  border-radius: 50%;
+  margin-bottom: 1.1em;
+}
+
+h1 {
+  font-size: 1.7em;
+  font-weight: var(--fw-400);
+  margin-bottom: -0.2em;
+  letter-spacing: 0.017em;
+}
+
+h2 {
+  font-size: 14px;
+  font-weight: var(--fw-600);
+  color: var(--Green);
+  margin-bottom: 1em;
+  letter-spacing: 0.005em;
+}
+
+#article-p {
+  margin-bottom: 0.8em;
+}
+
+#buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+
+.button {
+  text-align: center;
+  font-weight: var(--fw-600);
+  padding: 1em;
+  background-color: var(--Button-Grey);
+  border-radius: 0.5em;
+}
+
+.button:hover, .button:active {
+  cursor: pointer;
+  color: var(--Background);
+  background-color: var(--Green);
+}
+
+footer {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%);
+  font-size: 10px;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--Green);
+}
+
+@media (max-width: 375px) {
+  article {
+    width: 23em;
+    padding: 1.5em;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 12px;
+  }
+}
